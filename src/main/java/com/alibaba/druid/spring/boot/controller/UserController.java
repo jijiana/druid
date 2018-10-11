@@ -40,7 +40,6 @@ public class UserController {
 	
 	@GetMapping("/checktransaction")    
 	public Mono<String> checktransaction(@RequestParam("pid") String pid){   
-		System.out.println(pid);
 		Long id = Long.valueOf(pid);
 		try{
 			service.checkTransactional(id);
