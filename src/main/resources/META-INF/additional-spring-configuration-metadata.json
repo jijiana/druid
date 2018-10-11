@@ -65,6 +65,26 @@
       "sourceType": "com.alibaba.druid.spring.boot.autoconfigure.stat.DruidFilterConfiguration",
       "description": "Enable WallFilter.",
       "defaultValue": false
+    },
+    {
+      "name": "spring.datasource.druid.web-stat-filter.principal-session-name",
+      "type": "java.lang.String",
+      "description": "A description for 'spring.datasource.druid.web-stat-filter.principal-session-name'"
+    },
+    {
+      "name": "spring.datasource.druid.web-stat-filter.profile-enable",
+      "type": "java.lang.String",
+      "description": "A description for 'spring.datasource.druid.web-stat-filter.profile-enable'"
+    },
+    {
+      "name": "spring.datasource.druid.web-stat-filter.session-stat-enable",
+      "type": "java.lang.String",
+      "description": "A description for 'spring.datasource.druid.web-stat-filter.session-stat-enable'"
+    },
+    {
+      "name": "spring.datasource.druid.web-stat-filter.session-stat-max-count",
+      "type": "java.lang.String",
+      "description": "A description for 'spring.datasource.druid.web-stat-filter.session-stat-max-count'"
     }
   ],
   "hints": [
@@ -72,132 +92,52 @@
       "name": "spring.datasource.druid.filter.stat.db-type",
       "type": "java.lang.String",
       "values": [
-        {
-          "value": "db2"
-        },
-        {
-          "value": "postgresql"
-        },
-        {
-          "value": "sqlserver"
-        },
-        {
-          "value": "oracle"
-        },
-        {
-          "value": "AliOracle"
-        },
-        {
-          "value": "mysql"
-        },
-        {
-          "value": "mariadb"
-        },
-        {
-          "value": "hive"
-        },
-        {
-          "value": "h2"
-        },
-        {
-          "value": "dm"
-        },
-        {
-          "value": "kingbase"
-        },
-        {
-          "value": "oceanbase"
-        },
-        {
-          "value": "xugu"
-        },
-        {
-          "value": "odps"
-        },
-        {
-          "value": "teradata"
-        },
-        {
-          "value": "log4jdbc"
-        },
-        {
-          "value": "phoenix"
-        },
-        {
-          "value": "edb"
-        },
-        {
-          "value": "kylin"
-        },
-        {
-          "value": "sqlite"
-        }
+        {"value": "db2"},
+        {"value": "postgresql"},
+        {"value": "sqlserver"},
+        {"value": "oracle"},
+        {"value": "AliOracle"},
+        {"value": "mysql"},
+        {"value": "mariadb"},
+        {"value": "hive"},
+        {"value": "h2"},
+        {"value": "dm"},
+        {"value": "kingbase"},
+        {"value": "oceanbase"},
+        {"value": "xugu"},
+        {"value": "odps"},
+        {"value": "teradata"},
+        {"value": "log4jdbc"},
+        {"value": "phoenix"},
+        {"value": "edb"},
+        {"value": "kylin"},
+        {"value": "sqlite"}
       ]
     },
     {
       "name": "spring.datasource.druid.filter.wall.db-type",
       "type": "java.lang.String",
       "values": [
-        {
-          "value": "db2"
-        },
-        {
-          "value": "postgresql"
-        },
-        {
-          "value": "sqlserver"
-        },
-        {
-          "value": "oracle"
-        },
-        {
-          "value": "AliOracle"
-        },
-        {
-          "value": "mysql"
-        },
-        {
-          "value": "mariadb"
-        },
-        {
-          "value": "hive"
-        },
-        {
-          "value": "h2"
-        },
-        {
-          "value": "dm"
-        },
-        {
-          "value": "kingbase"
-        },
-        {
-          "value": "oceanbase"
-        },
-         {
-          "value": "xugu"
-        },
-        {
-          "value": "odps"
-        },
-        {
-          "value": "teradata"
-        },
-        {
-          "value": "log4jdbc"
-        },
-        {
-          "value": "phoenix"
-        },
-        {
-          "value": "edb"
-        },
-        {
-          "value": "kylin"
-        },
-        {
-          "value": "sqlite"
-        }
+        {"value": "db2"},
+        {"value": "postgresql"},
+        {"value": "sqlserver"},
+        {"value": "oracle"},
+        {"value": "AliOracle"},
+        {"value": "mysql"},
+        {"value": "mariadb"},
+        {"value": "hive"},
+        {"value": "h2"},
+        {"value": "dm"},
+        {"value": "kingbase"},
+        {"value": "oceanbase"},
+        {"value": "xugu"},
+        {"value": "odps"},
+        {"value": "teradata"},
+        {"value": "log4jdbc"},
+        {"value": "phoenix"},
+        {"value": "edb"},
+        {"value": "kylin"},
+        {"value": "sqlite"}
       ]
     }
   ]

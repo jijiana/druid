@@ -23,6 +23,7 @@ import com.alibaba.druid.spring.boot.autoconfigure.stat.DruidFilterConfiguration
 import com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration;
 import com.alibaba.druid.spring.boot.autoconfigure.stat.DruidStatViewServletConfiguration;
 import com.alibaba.druid.spring.boot.autoconfigure.stat.DruidWebStatFilterConfiguration;
+import com.alibaba.druid.support.http.WebStatFilter;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -32,6 +33,7 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
@@ -56,4 +58,15 @@ public class DruidDataSourceAutoConfigure {
         LOGGER.info("Init DruidDataSource");
         return new DruidDataSourceWrapper();
     }
+    
+    @Bean
+    public FilterRegistrationBean druidStatFilter2(){       
+           FilterRegistrationBean filterRegistrationBean = new FilterRegistrationBean(new WebStatFilter());
+           //添加过滤规则.
+           filterRegistrationBean.addUrlPatterns("/user/insertOne");
+           filterRegistrationBean.addUrlPatterns("/user/checktransaction");
+           //添加不需要忽略的格式信息.
+           filterRegistrationBean.addInitParameter("exclusions","*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid2/*");
+           return filterRegistrationBean;
+    } 
 }
