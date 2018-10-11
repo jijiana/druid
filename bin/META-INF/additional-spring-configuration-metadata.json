@@ -65,6 +65,7 @@
       "sourceType": "com.alibaba.druid.spring.boot.autoconfigure.stat.DruidFilterConfiguration",
       "description": "Enable WallFilter.",
       "defaultValue": false
+<<<<<<< HEAD
     },
     {
       "name": "spring.datasource.druid.web-stat-filter.principal-session-name",
@@ -138,6 +139,141 @@
         {"value": "edb"},
         {"value": "kylin"},
         {"value": "sqlite"}
+=======
+    }
+  ],
+  "hints": [
+    {
+      "name": "spring.datasource.druid.filter.stat.db-type",
+      "type": "java.lang.String",
+      "values": [
+        {
+          "value": "db2"
+        },
+        {
+          "value": "postgresql"
+        },
+        {
+          "value": "sqlserver"
+        },
+        {
+          "value": "oracle"
+        },
+        {
+          "value": "AliOracle"
+        },
+        {
+          "value": "mysql"
+        },
+        {
+          "value": "mariadb"
+        },
+        {
+          "value": "hive"
+        },
+        {
+          "value": "h2"
+        },
+        {
+          "value": "dm"
+        },
+        {
+          "value": "kingbase"
+        },
+        {
+          "value": "oceanbase"
+        },
+        {
+          "value": "xugu"
+        },
+        {
+          "value": "odps"
+        },
+        {
+          "value": "teradata"
+        },
+        {
+          "value": "log4jdbc"
+        },
+        {
+          "value": "phoenix"
+        },
+        {
+          "value": "edb"
+        },
+        {
+          "value": "kylin"
+        },
+        {
+          "value": "sqlite"
+        }
+      ]
+    },
+    {
+      "name": "spring.datasource.druid.filter.wall.db-type",
+      "type": "java.lang.String",
+      "values": [
+        {
+          "value": "db2"
+        },
+        {
+          "value": "postgresql"
+        },
+        {
+          "value": "sqlserver"
+        },
+        {
+          "value": "oracle"
+        },
+        {
+          "value": "AliOracle"
+        },
+        {
+          "value": "mysql"
+        },
+        {
+          "value": "mariadb"
+        },
+        {
+          "value": "hive"
+        },
+        {
+          "value": "h2"
+        },
+        {
+          "value": "dm"
+        },
+        {
+          "value": "kingbase"
+        },
+        {
+          "value": "oceanbase"
+        },
+         {
+          "value": "xugu"
+        },
+        {
+          "value": "odps"
+        },
+        {
+          "value": "teradata"
+        },
+        {
+          "value": "log4jdbc"
+        },
+        {
+          "value": "phoenix"
+        },
+        {
+          "value": "edb"
+        },
+        {
+          "value": "kylin"
+        },
+        {
+          "value": "sqlite"
+        }
+>>>>>>> branch 'master' of https://github.com/jijiana/druid.git
       ]
     }
   ]
